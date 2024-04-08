@@ -8,3 +8,4 @@ load_dotenv(ENV_FILE)
 
 class Setting:
     DATABASE_URL = os.getenv("DATABASE_URL")
+    LOGGER = os.getenv("LOGGER")
