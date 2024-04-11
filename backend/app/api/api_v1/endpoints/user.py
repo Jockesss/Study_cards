@@ -11,7 +11,7 @@ router = APIRouter()
 async def read_root(db: AsyncSession = Depends(get_db)):
     async with db.begin():
         # Execute the SQL query to fetch all records from 'test_table'
-        result = await db.execute(text("SELECT * FROM test_table"))
+        result = await db.execute(text("SELECT * FROM users"))
         # Fetch all rows from the result of the query
         result_list = result.fetchall()
         # Convert each row in the result list to a dictionary
