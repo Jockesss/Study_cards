@@ -1,11 +1,6 @@
-from dotenv import load_dotenv
-import os
-
-# Define the path to the .env file depending on the environment
-ENV_FILE = ".env.local"
-load_dotenv(ENV_FILE)
+from pydantic_settings import BaseSettings
 
 
-class Setting:
-    DATABASE_URL = os.getenv("DATABASE_URL")
-    LOGGER = os.getenv("LOGGER")
+class Setting(BaseSettings):
+    API_V1_STR: str = "/api/v1"
+
